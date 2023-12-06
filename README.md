@@ -1,41 +1,33 @@
 # Final-Project-Statistical-Modelling-with-Python
 
 ## Project/Goals
-
-(1) We're using Python to build a statistical model. First, we gather data from different sources using  different APIs.
-
-(2) we organize this data into a SQLite database.
-(3) After creating tables in the database, we get a final dataset for further analysis.
-
-(3) Performing EDA--In the analysis phase, we visually explore the data to find any unusual patterns or outliers. We also clean, group, and filter the data to make it ready for analysis. Additionally, we perform hypothesis testing to check if there are meaningful relationships between different features.
-(4) we create a statistical model to study connections and make predictions between the dependent variable and other factor, the independent variables).
+The project goals include using Python to build a statistical model. This involves gathering data from various sources through APIs, organizing it into a SQLite database, and conducting Exploratory Data Analysis (EDA).
+The analysis phase includes visually exploring the data, cleaning and preparing it, and performing hypothesis testing. Ultimately, the project aims to create a statistical model to study connections and make predictions, particularly focusing on understanding the impact of independent variables on the dependent variable.
 
 ## Process
 ### 1) Connecting to CityBikes API: CityBikes
 Citybikes is an API that provides bike sharing data for apps, research and projects.
-CityBikes supports more than 400 cities and the Citybikes API is an interesting dataset for building bike-sharing transportation projects.
+CityBikes supports more than 400 cities and the Citybikes.
 
 1. Explore the structure of the API, query the API and understand returned Data.
-2. Choose a city covered by the CityBikes API and retrieve all available bike stations in that city.
+2. Choose Toronto city covered by the CityBikes API and retrieve all available bike stations in that city.
 3. For each bike station, use the API to call the latitude, longitude and number of bikes.
 4. Parse the JSON object into a Pandas dataframe and created csv files.
 
 # 2) Connecting to the Foursquare API and yelp API
-(1) Connect to the Yelp API. This API offers similar services as Foursquare.
-(2) For each of the bike stations in Part 1, query both APIs to retrieve information for the indian restaurants and Bars of Toronto location.
-(3) Created a DataFrame for the Yelp results and Foursquare results.
-
+(1) Connect to Foursquare API and yelp API to extract Data.
+(2) For each of the bike stations in Part 1, query both APIs to retrieve information for the indian restaurants of Toronto location.
+(3) Created a DataFrame for the Yelp results and Foursquare results. Created csv files.
 (4) Compared the quality of the Yelp and Foursquare API data. Yelp API provided more complete data as mentioned in above steps, There are no null and duplicated value in yelp results compared to foursquare Api. Yelp provides a greater number of field attributes in its results compared to Foursquare
 
-### 3) Joining the Data
+## 3) Joining the Data
 (1) Join the data from CityBikes(part 1) with the Foursquare API and yelp API data (part 2) to create a new dataframe.
-(2) Use data visualization to explore the data.
-(3) Created own SQLite database and store the collected data from the Apis.
+(2) Created own SQLite database, established connection and store the collected data from the Apis..
+(3) Use data visualization to explore the data, conducted Hypothesis testing.
+
 ## 4) Building a Model
 (1) Build a regression model using Python’s statsmodels module that demonstrates a relationship between the number of bikes in Toronto location and the characteristics of the restaurants in that location.
-Interpreted results. Expand on the model output, and derive insights from your model.
-
-
+Provided an Interpreted results.Elaborating on the model output and extracting insights.
 
 ## Results
 -- Created a Linear Regression Model between 'Bikes Available' (dependent variable) and ['Distance', 'Rating'] (independent variables)

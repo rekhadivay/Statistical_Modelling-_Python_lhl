@@ -58,7 +58,7 @@ Reference link: https://github.com/rekhadivay/Statistical_Modelling-_Python_lhl/
  6. The overall model fit is notably weaker.
  
 ## Challenges 
- We Gathered Data from differenet APIs. in this process we faced many Challenges: 
+ We Gathered Data from differenet APIs. In this process we faced many Challenges: 
  1. Foursquare's Details Demands: Required precise parameters for Points of Interest (POI), leading to potential  data limitations.
  2. Messy Foursquare Data:  Foursquare data had mixed null values, making data cleaning a critical step.
  3. Yelp's Request Restrictions: Yelp gave good info but limited how much we could ask, so we had to be careful.
@@ -67,5 +67,5 @@ Reference link: https://github.com/rekhadivay/Statistical_Modelling-_Python_lhl/
 
 ## Future Goals
 
- if i have extra time, I'd gather more data from the API.
+ If i have extra time, I'd gather more data from the API.
  The current model lacks depth as it has low accuracy in fitting, and I believe incorporating more variables would enhance its performance. This way, we can extract more meaningful insights.

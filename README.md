@@ -45,67 +45,20 @@ Reference link: https://github.com/rekhadivay/Statistical_Modelling-_Python_lhl/
 
 Reference link: https://github.com/rekhadivay/Statistical_Modelling-_Python_lhl/blob/main/notebooks/model_building.ipynb
 
-### Results
--- Created a Linear Regression Model between 'Bikes Available' (dependent variable) and ['Distance', 'Rating'] (independent variables)
-
-   OLS Regression Results                            
-==============================================================================
-Dep. Variable:        Bikes Available   R-squared:                       0.009
-Model:                            OLS   Adj. R-squared:                  0.009
-Method:                 Least Squares   F-statistic:                     118.0
-Date:                Fri, 01 Dec 2023   Prob (F-statistic):           9.63e-52
-Time:                        16:33:10   Log-Likelihood:                -83249.
-No. Observations:               24829   AIC:                         1.665e+05
-Df Residuals:                   24826   BIC:                         1.665e+05
-Df Model:                           2                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P>|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-const         15.5226      0.475     32.703      0.000      14.592      16.453
-distance       0.0007      0.000      3.890      0.000       0.000       0.001
-rating        -1.0057      0.066    -15.237      0.000      -1.135      -0.876
-==============================================================================
-Omnibus:                     6339.075   Durbin-Watson:                   0.040
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):            17532.458
-Skew:                           1.357   Prob(JB):                         0.00
-Kurtosis:                       6.096   Cond. No.                     7.49e+03
-==============================================================================
-
-### Interpretation of the model
+## Results & Interpretation of the model
+ Created a Linear Regression Model between 'Bikes Available' (dependent variable) and ['Distance', 'Rating'] (independent variables)
+ 
 1. For "const," and "distance"with a p-value of 0.000, we reject the null hypothesis, suggesting that the intercept is statistically different from zero and suggesting that the distance variable is statistically significant.
 
 2. With R-squared around 0.009, the model explains a very small proportion of the variance in "Bikes Available".
    
 3. The R-squared and adjusted R-squared values in this regression output suggest that the model explains a very small   percentage (less than 1%) of the variance in the number of available bikes. The low values indicate that the chosen independent variables ("distance" and "rating") are not effective in explaining the variability in the dependent variable.
-### Removing Rating and recreating model with 'Bikes Available'(dependent variable) and 'Distance' Independent variable
-
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:        Bikes Available   R-squared:                       0.000
-Model:                            OLS   Adj. R-squared:                  0.000
-Method:                 Least Squares   F-statistic:                     3.858
-Date:                Fri, 01 Dec 2023   Prob (F-statistic):             0.0495
-Time:                        19:45:11   Log-Likelihood:                -83365.
-No. Observations:               24829   AIC:                         1.667e+05
-Df Residuals:                   24827   BIC:                         1.667e+05
-Df Model:                           1                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P>|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-const          8.5079      0.116     73.283      0.000       8.280       8.735
-distance       0.0003      0.000      1.964      0.050    6.96e-07       0.001
-==============================================================================
-Omnibus:                     6402.927   Durbin-Watson:                   0.031
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):            17671.455
-Skew:                           1.372   Prob(JB):                         0.00
-Kurtosis:                       6.091   Cond. No.                     1.81e+03
-==============================================================================
-
+ 4. Removing Rating and recreating model with 'Bikes Available'(dependent variable) and 'Distance' Independent variable
+ 5. removing the 'rating' variable results in a significant drop in the model's explanatory power, as reflected in the decrease in R-squared value.
+ 6. The overall model fit is notably weaker.
+ 
 ## Challenges 
-### Challenges Faced:
-We Gathered Data from differenet APIs:
+ We Gathered Data from differenet APIs. in this process we faced many Challenges: 
  1. Foursquare's Details Demands: Required precise parameters for Points of Interest (POI), leading to potential  data limitations.
  2. Messy Foursquare Data:  Foursquare data had mixed null values, making data cleaning a critical step.
  3. Yelp's Request Restrictions: Yelp gave good info but limited how much we could ask, so we had to be careful.
